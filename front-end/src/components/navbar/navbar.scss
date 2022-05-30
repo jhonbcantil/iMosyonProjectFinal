@@ -1,0 +1,139 @@
+@import "@fontsource/poppins/700.css";
+
+.navbar-wrapper {
+
+  @supports(backdrop-filter: blur(5px)) {
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+  }
+
+  @supports not (backdrop-filter: blur(5px)) {
+    @media screen and (max-width: 502px) {
+      background: linear-gradient(89.29deg, #1E2326 -9.9%, #1E2427 136.74%);
+    }
+  }
+  color: #fff;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  margin: auto;
+
+  padding: {
+    top: 20px;
+    bottom: 20px;
+  }
+
+  .navbar {
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 1920px;
+
+
+    width: 100%;
+    opacity: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+
+    .navbar-brand {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 500;
+
+      .brand {
+        font-family: 'Poppins', sans-serif;
+        font-weight: bolder;
+        font-size: 22px;
+        display: block;
+        letter-spacing: 1.2px;
+      }
+
+      :not(.brand) {
+        display: none;
+      }
+
+      @media screen and (min-width: 767px) {
+        display: flex;
+        align-items: baseline;
+        justify-content: center;
+        gap: 20px;
+        letter-spacing: 0.5px;
+
+        :not(.brand) {
+          display: block;
+        }
+      }
+
+      a:not(.brand) {
+        background-image: linear-gradient(#fff, #fff);
+        background-position: 0 100%; /*OR bottom left*/
+        background-size: 0% 2px;
+        background-repeat: no-repeat;
+        transition:
+        background-size 0.3s,
+        background-position 0s 0.3s;
+        &:hover {
+          background-position: 100% 100%; /*OR bottom right*/
+          background-size: 100% 2px;
+        }
+      }
+
+    }
+
+    .navbar-action {
+      font-family: 'Poppins', sans-serif;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      gap: 20px;
+      letter-spacing: 1.2px;
+
+      a:not(.show-true) {
+        display: none;
+      }
+
+      button:not(.show-true) {
+        display: none;
+      }
+
+      @media screen and (min-width: 767px) {
+        display: flex;
+        gap: 30px;
+        align-items: center;
+        justify-content: center;
+
+        button {
+          display: block;
+        }
+
+        .btn-burger {
+          display: none;
+        }
+
+        a:not(.show-true) {
+          display: block;
+          background-image: linear-gradient(#fff, #fff);
+          background-position: 0 100%; /*OR bottom left*/
+          background-size: 0% 2px;
+          background-repeat: no-repeat;
+          transition:
+          background-size 0.3s,
+          background-position 0s 0.3s;
+          &:hover {
+            background-position: 100% 100%; /*OR bottom right*/
+            background-size: 100% 2px;
+          }
+        }
+
+      }
+    }
+
+    @media screen and (max-width: 767px) {
+      width: 100%;
+      padding-left: 19px;
+      padding-right: 19px;
+      justify-content: space-between;
+    }
+  }
+}

@@ -1,0 +1,63 @@
+@import '../node_modules/@fortawesome/fontawesome-pro/scss/light.scss';
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+
+  text-size-adjust: 100%;
+}
+
+:root {
+  --primary-white: #fdfdfd;
+  --primary-dark: #2f3134;
+  --secondary-dark: #191a1b;
+  --placeholder-color: #838384;
+  --blue: #004fe9;
+  --red: #ed6161;
+  --font-family: 'Poppins', sans-serif;
+}
+
+a.d-animate {
+  text-decoration: none;
+  color: var(--primary-white);
+
+  background-image: linear-gradient(var(--blue), var(--blue));
+  background-position: 0 100%; /*OR bottom left*/
+  background-size: 0% 2px;
+  background-repeat: no-repeat;
+  transition: background-size 0.3s, background-position 0s 0.3s;
+  &:hover {
+    background-position: 100% 100%; /*OR bottom right*/
+    background-size: 100% 2px;
+  }
+}
+
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+html {
+  scroll-behavior: smooth;
+  width: 100%;
+  outline-color: transparent;
+  font-family: var(--font-family);
+}
+
+html,
+body {
+  width: 100%;
+  outline-color: transparent;
+}
